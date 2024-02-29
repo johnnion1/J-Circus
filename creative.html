@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>J Circus</title>
+        <link rel="shortcut icon" href="#">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=Keania+One&family=Lexend+Deca:wght@100..900&family=Lusitana:wght@400;700&family=Marvel:ital,wght@0,400;0,700;1,400;1,700&family=Montaga&display=swap"
+                rel="stylesheet">
+        <style>
+        :root {
+                --holoGreenTestColor: rgba(34, 238, 51, 0.407);
+        }
+        * {
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+        }
+        html, body {
+                height: 100%;
+                width: 100%;
+        }
+        .montaga-regular {
+        font-family: "Montaga", serif;
+        font-weight: 400;
+        font-style: normal;
+        }
+        .marvel-regular {
+        font-family: "Marvel", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        }
+
+        .marvel-bold {
+        font-family: "Marvel", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        }
+
+        .marvel-regular-italic {
+        font-family: "Marvel", sans-serif;
+        font-weight: 400;
+        font-style: italic;
+        }
+
+        .marvel-bold-italic {
+        font-family: "Marvel", sans-serif;
+        font-weight: 700;
+        font-style: italic;
+        }
+        .lusitana-regular {
+        font-family: "Lusitana", serif;
+        font-weight: 400;
+        font-style: normal;
+        }
+
+        .lusitana-bold {
+        font-family: "Lusitana", serif;
+        font-weight: 700;
+        font-style: normal;
+        }
+     /*  #<uniquifier>: Use a uniquifier for the class name
+<weight>: Use a value from 100 to 900 */
+
+        .lexend-deca-abc {
+        font-family: "Lexend Deca", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 100;
+        font-style: normal;
+        }
+        .keania-one-regular {
+        font-family: "Keania One", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        }
+        .inika-regular {
+        font-family: "Inika", serif;
+        font-weight: 400;
+        font-style: normal;
+        }
+
+        .inika-bold {
+        font-family: "Inika", serif;
+        font-weight: 700;
+        font-style: normal;
+        }
+@media(width < 700px){
+        body {
+                background: rgb(255, 166, 32);
+                display: grid;
+                grid-template-rows: 5vh 90vh 5vh;
+                height:100vh;
+                width: 100vw;
+                overflow: hidden;
+
+                
+        }
+        .bottom {
+                border: 3px dotted purple;
+                grid-row: 3/ 4;
+                width: 20px;
+                height: 20px;
+                
+
+        }
+        .halfCircle {
+                background-color: #000;
+                height: 90vh;
+                width: 280vw;
+                border-radius: 50%;
+                position: absolute;
+                left: 3vw;
+        }
+
+        .home {
+                border: 2px solid black;
+                grid-row: 1 / 2;
+                
+                height: 100%;
+                
+        }
+        .midDiv { 
+                position:relative;
+                border: 3px dotted purple;
+                grid-row: 2/3;
+
+                display: flex;
+                align-items: center;
+               
+                
+        }
+      /*   .picture {
+                
+                position:absolute;
+                top: 1vh;
+                left: 1vh;
+                height: 15vh;
+                width: 15vh;
+                background-color: #fff;
+        } */
+       
+        
+        }
+
+/* larger screen queries:
+                body:
+                grid-template-rows: 5vh 75vh 20vh;
+
+*/
+@media(width > 700px) {
+ body {
+                background: #ffa620;
+                display: grid;
+                grid-template-rows: 5vh 75vh 20vh;
+                grid-template-columns: 85vw 1fr;
+                height:100vh;
+                width: 100vw;
+               /*  overflow: hidden; */
+
+                
+        }
+        
+
+        .home {
+                /* border: 2px solid black; */
+                grid-row: 1 / 2;
+                height: 100%;
+                position: relative;
+                
+        }
+        .welcomeText {
+                position: absolute;
+                top: 1.5vh;
+                left: 2.6vw;
+                font-size: 2rem;
+                
+        }
+        .midDiv { 
+                position:relative;
+             /*    border: 1px dotted black; */
+                grid-row: 2/3;
+grid-column: 1/-1;
+                display: flex;
+                align-items: center;
+               
+                
+        }
+        .halfCircle {
+                background-color: ;
+                height: 80vh;
+                width: 96vw;
+                transform: rotateX(45deg);
+                border-radius: 50% 3% 10em 40%;
+                position: absolute;
+                left: 3vw;
+
+        }
+        .line {
+                position: absolute;
+                top:5vh;
+                left: 2.5vw;
+                content: "";
+                width: 80%;
+                height: 1vh;
+                background-color: #000;
+                border-radius: 40% 700% 40% 250%;
+        }
+
+        .pictureFrame {
+                position:absolute;
+                top: 2vh;
+                left: 2vh;
+                background: #000;
+                height: 15vh;
+                width: 15vh;
+                border-radius: 50%;
+
+        }
+        .cont { position:absolute;
+                top: 2.7vh;
+                left: 2.7vh;
+                height: 13vh;
+                width: 13vh;
+        }
+        .picContainer {
+                
+                position: relative;
+                height: 100%;
+                width: 100%;
+        }
+        .pictureItem {
+                
+                position: absolute;
+                width: 100%;
+                height:100%;
+                transform-style: preserve-3d;
+                transition: all 0.5s ease;
+                
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+        }
+         .picFront {
+                background-image: url(/images/Untitled.png);
+                min-width: 13vh;
+                min-height: 13vh;
+				/* max-width: 120%;
+                max-height: 100%;
+				width: 120%;
+                height: 160%;
+				aspect-ratio: 1/1; */
+                border-radius: 50%;
+                background-position: center;
+                /* Make the background image cover the area of the <div>, and clip the excess */
+                background-size: cover;
+                border: 2px solid rgb(161, 158, 149);
+                
+                position:absolute;
+                backface-visibility: hidden;
+                
+        }
+	/* 	.picFront img {
+			aspect-ratio: 1/1;
+				max-height: 100%;
+				max-width: 100%;
+		} */
+         .picBack {
+                top: -0.5vh;
+                left: 0.05vh;
+               /*  background-image: url(/images/1portrait.jpg); */
+                width: 13.5vh;
+                height: 13.5vh;/* 
+               */  background-position: center;
+                /* Make the background image cover the area of the <div>, and clip the excess */
+               /*  background-size: cover; */
+                background-color: rgb(255, 211, 66);
+                border-radius: 50%;
+                border: 5px solid white;
+
+                position:absolute;
+                backface-visibility: hidden;
+                transform: rotateX(180deg);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                
+        }
+        .picBack::after{
+                content: "Awesome!";
+                font-size: 1.4em;
+                color: white;
+                font-weight: bold;
+        }
+        .pictureItem:hover {
+                transform: rotateX(180deg);
+        }
+        .picture:active {
+                transform: rotateX(280deg);
+
+        }
+
+
+
+        .bottom {
+       /*  border-top: 3px dotted black; */
+        grid-row: 3/ 4;
+        grid-column: 1/-1;
+        width: 100%;
+        height: 100%;
+        display: flex;
+
+        }
+        .rectangle1 {
+                background-color: #B9FF09;
+                width: 43vw;
+                left:-0.5vw;
+                height: 100%;
+                position: relative;
+               
+                transform: skewX(-2deg);
+                overflow:hidden;
+        }
+        .rectangle2{
+                background-color: #4B3F72;
+                width: 28vw;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transform: skewX(-2deg);
+        }
+        .rectangle3{
+                background-color: #CAA8F5/* #843B62 */;
+                width: 30vw;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                transform: skewX(-2deg) skewY(-1deg);
+        }
+        .circle1{
+                position: absolute;
+                left: 1.5vw;
+                top: 0.86vh;
+                background-color: #fff;
+                height: 99%;
+                width: 40vw;
+                border-radius: 45% 35% 0% 0;
+        }
+        .circle2 {
+	background-color: white;
+	height: calc(100% - 2vh);
+	width: 26vw;
+	border-radius: 100% 100% 100% 100%;
+        transform: skewX(-2deg);
+}
+.circle3 {
+        
+	background-color: white;
+	height: calc(100% - 2vh);
+	width: 25vw /* 32vw */;
+        border-radius:  0% 0 45% 35%;
+        transform: skewX(-2deg)
+}
+
+.circle4 {
+		background-color: lightpink;
+		border: 100% 0 100% 0;
+		height: 90%;
+		width: 100%;
+}
+.test {
+        margin-left: 1vh;
+        height: 72vh;
+        width: 97%;
+        border-radius: 50em  6% 20em 50em;
+        background-color: #222;
+		display: flex;
+		justify-content: end;
+}
+.mainContain {        
+		background-color: rgba(34, 238, 51, 0.187);
+        height: 100%;
+        width: 75%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+}
+.imageIcons {
+	width: 100%;
+	height: 100%;
+}
+.imgBox {
+        background-image: linear-gradient(to left, #00000000, #ffffffa1);
+	min-width: 85%;
+	min-height: 5vh;
+	height: 100px;
+	max-height: 20vh;
+	margin-bottom: 1px;
+	transform: perspective(40px) rotateX(-1deg);
+}
+.imgBox img {
+	position: relative;
+	left: 30px;
+        width: fit-content;
+		max-width: 80%;
+        height: fit-content;
+		max-height: 20vh;
+
+}
+.imgBox {
+
+}
+
+
+/* .imgBox::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        max-width: 100%;
+        height: 100%;
+        background: #000;
+        transform: skew(-45deg);
+        z-index: 1;
+} */
+
+}
+
+
+
+
+/* @media(width>1000px) {
+        .imagewheel .imageIcons .imgBox {
+	transform-origin: 400px;
+        left: -390px;
+	
+}
+} */
+ 
+
+        </style>
+</head>
+
+<body>
+<div class="home "><div class="welcomeText keania-one-regular">Hello there</div></div>
+<div class="line"></div>
+<div class="midDiv">
+
+        <div class="pictureFrame">
+        </div>
+        <div class="cont">
+			
+			<div class="picContainer">
+		
+				<div class="pictureItem">
+				<div class="picFront"></div>
+				<div class="picBack"></div>
+				</div>
+			
+			</div>
+		</div>
+
+        <div class="test">
+        <div class="mainContain">
+			
+						<div class="imageIcons">
+							<div class="imgBox" style="--i:1">
+							<img src="images/ordered/1.png" alt="">
+							</div>
+							<div class="imgBox imgBx2" style="--i:2">
+							<img src="images/ordered/2.png" alt="">
+							</div>
+							<div class="imgBox" style="--i:3">
+							<img src="images/ordered/3.png" alt="">
+							</div>
+							<div class="imgBox" style="--i:4">
+							<img src="images/ordered/4.png" alt="">
+							</div>
+							<div class="imgBox" style="--i:5">
+							<img src="images/ordered/5.png" alt="">
+							</div>
+							<div class="imgBox" style="--i:6">
+							<img src="images/ordered/6.png" alt="">
+							</div>
+							<div class="imgBox" style="--i:7">
+							<img src="images/ordered/7.png" alt="">
+							</div>
+							<div class="imgBox" style="----ssssssssssssssssssssssss3">
+							<img src="images/pastedImage3.png" alt="">
+							</div>
+						</div>
+
+
+
+        </div>
+        </div>
+
+</div>
+<div class="bottom">
+        <div class="rectangle1">
+        <div class="circle1">
+        </div>
+        </div>
+        <div class="rectangle2">
+        <div class="circle2">
+        </div>
+        </div>
+
+        <div class="rectangle3">
+        <div class="circle3">
+        </div>
+        </div>
+
+
+</div>  
+<div class="rightRectangle"></div>
+
+</body>
+</html>
