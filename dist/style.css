@@ -1,0 +1,660 @@
+:root {
+  --holoGreenTestColor: rgba(34, 238, 51, 0.407);
+
+  --navgigator-buttons-text-height: ;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+.montaga-regular {
+  font-family: "Montaga", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.marvel-regular {
+  font-family: "Marvel", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.marvel-bold {
+  font-family: "Marvel", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.marvel-regular-italic {
+  font-family: "Marvel", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.marvel-bold-italic {
+  font-family: "Marvel", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+.lusitana-regular {
+  font-family: "Lusitana", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.lusitana-bold {
+  font-family: "Lusitana", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+/*  #<uniquifier>: Use a uniquifier for the class name
+                     <weight>: Use a value from 100 to 900 */
+
+.lexend-deca-abc {
+  font-family: "Lexend Deca", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+}
+.keania-one-regular {
+  font-family: "Keania One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.inika-regular {
+  font-family: "Inika", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.inika-bold {
+  font-family: "Inika", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+/*  @media (width < 700px) {
+                             body {
+                               background: rgb(255, 166, 32);
+                               display: grid;
+                               grid-template-rows: 5vh 90vh 5vh;
+                               height: 100vh;
+                               width: 100vw;
+                               overflow: hidden;
+                             }
+                             .bottom {
+                               border: 3px dotted purple;
+                               grid-row: 3/ 4;
+                               width: 20px;
+                               height: 20px;
+                             }
+                             .halfCircle {
+                               background-color: #000;
+                               height: 90vh;
+                               width: 280vw;
+                               border-radius: 50%;
+                               position: absolute;
+                               left: 3vw;
+                             }
+
+                             .home {
+                               border: 2px solid black;
+                               grid-row: 1 / 2;
+
+                               height: 100%;
+                             }
+                             .midDiv {
+                               position: relative;
+                               border: 3px dotted purple;
+                               grid-row: 2/3;
+
+                               display: flex;
+                               align-items: center;
+                             }
+                               .picture {
+
+                                     position:absolute;
+                                     top: 1vh;
+                                     left: 1vh;
+                                     height: 15vh;
+                                     width: 15vh;
+                                     background-color: #fff;
+                             }
+                           }*/
+
+/* larger screen queries:
+                                     body:
+                                     grid-template-rows: 5vh 75vh 20vh;
+
+                     */
+@media (width >200px) {
+  body {
+    background: #ffa620;
+    display: grid;
+    grid-template-rows: 5vh 75vh 20vh;
+    grid-template-columns: 85vw 1fr;
+    height: 100vh;
+    width: 100vw;
+    /*  overflow: hidden; */
+  }
+
+  .home {
+    /* border: 2px solid black; */
+    grid-row: 1 / 2;
+    height: 100%;
+    position: relative;
+  }
+  .welcomeText {
+    position: absolute;
+    width: 150%;
+    top: 1.2vh;
+    left: 2.6vw;
+    font-size: 2rem;
+    transition: transform 0.4s ease, color 0.2s;
+  }
+  /*     .welcomeText::after {
+               content: "! Welcome to J CIRCUS.";
+             }
+      */
+  .welcomeText:hover,
+  .welcomeText:hover::after {
+    text-shadow: 2px 2px rgba(79, 79, 79, 0.594);
+  }
+  .midDiv {
+    position: relative;
+    /*    border: 1px dotted black; */
+    grid-row: 2/3;
+    grid-column: 1/-1;
+    display: flex;
+    align-items: center;
+  }
+  .halfCircle {
+    background-color: ;
+    height: 80vh;
+    width: 96vw;
+    transform: rotateX(45deg);
+    border-radius: 50% 3% 10em 40%;
+    position: absolute;
+    left: 3vw;
+  }
+  .line {
+    position: absolute;
+    top: 5vh;
+    left: 2.5vw;
+    content: "";
+    width: 80%;
+    height: 1vh;
+    background-color: #000;
+    border-radius: 40% 700% 40% 250%;
+  }
+
+  .pictureFrame {
+    position: absolute;
+    top: 2vh;
+    left: 2vh;
+    background: #000;
+    height: 15vh;
+    width: 15vh;
+    border-radius: 50%;
+    z-index: 2;
+  }
+  .cont {
+    position: absolute;
+    top: 2.7vh;
+    left: 2.7vh;
+    height: 13vh;
+    width: 13vh;
+  }
+  .picContainer {
+    position: relative;
+    height: 100%;
+    width: 100%;
+  }
+  .pictureItem {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.7s;
+  }
+  .pictureItem:hover {
+    transform: scale(1.05);
+    /*  -webkit-animation-name: flipIt;
+               animation-name: flipIt;
+               -webkit-animation-duration: 1.5s;
+               animation-duration: 1.5s;
+
+               -webkit-animation-timing-function: ease;
+               animation-timing-function: ease;
+               -webkit-animation-iteration-count: 2;
+
+               animation-iteration-count: 2;
+               -webkit-animation-direction: alternate;
+               animation-direction: alternate; */
+  }
+  .pictureItem:hover .picFront {
+    border-color: beige;
+    /* transform: scale(1.2); */
+  }
+  /*   .picture:active {
+               transform: rotateX(280deg);
+             } */
+  .cont {
+    z-index: 2;
+  }
+  .picFront {
+    background-image: url(./assets/images/people/Smiling-Business-Man-Standing-transparent.png);
+    min-width: 14vh;
+    min-height: 14vh;
+    /* max-width: 120%;
+                                     max-height: 100%;
+                     				width: 120%;
+                                     height: 160%;
+                     				aspect-ratio: 1/1; */
+    border-radius: 50%;
+    background-position: center;
+    /* Make the background image cover the area of the <div>, and clip the excess */
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    border: 2px solid rgb(161, 158, 149);
+
+    position: absolute;
+    backface-visibility: hidden;
+  }
+  /* 	.picFront img {
+                     			aspect-ratio: 1/1;
+                     				max-height: 100%;
+                     				max-width: 100%;
+                     		} */
+  .picBack {
+    top: -0.5vh;
+    left: 0.05vh;
+    /*  background-image: url(/images/1portrait.jpg); */
+    width: 13.5vh;
+    height: 13.5vh; /*
+                                    */
+    background-position: center;
+    /* Make the background image cover the area of the <div>, and clip the excess */
+    /*  background-size: cover; */
+    background-color: rgb(255, 211, 66);
+    border-radius: 50%;
+    border: 5px solid white;
+
+    position: absolute;
+    backface-visibility: hidden;
+    transform: rotateX(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .picBack::after {
+    content: "Awesome!";
+    font-size: 1.4em;
+    color: white;
+    font-weight: bold;
+  }
+
+  .spin {
+    /*    transform: rotateX(180deg); */
+    -webkit-animation-name: flipIt;
+    animation-name: flipIt;
+    -webkit-animation-duration: 1.3s;
+    animation-duration: 1.3s;
+
+    -webkit-animation-timing-function: ease;
+    animation-timing-function: ease;
+    -webkit-animation-iteration-count: 2;
+
+    animation-iteration-count: 2;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+  }
+  @keyframes flipIt {
+    0% {
+      transform: rotateX(0deg) scale(1.1);
+      background-color: #fff0;
+    }
+    69% {
+      background-color: #b3fa00;
+    }
+    100% {
+      transform: rotateX(360deg) scale(2);
+      background-color: #b3fa00;
+    }
+  }
+
+  .bottom {
+    /*  border-top: 3px dotted black; */
+    grid-row: 3/ 4;
+    grid-column: 1/-1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    z-index: 3;
+  }
+  .leftButton {
+    background-color: #b9ff09;
+    width: 43vw;
+    /*    left: -0.5vw; */
+    height: 99%;
+    bottom: -1%;
+    position: relative;
+
+    transform: skewX(-2deg);
+    overflow: hidden;
+  }
+  .leftButton > button {
+    background-color: #843b62;
+  }
+  .middleButton {
+    background-color: #4b3f72;
+    width: 28vw;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: skewX(-2deg);
+  }
+
+  .middleButton.activated > button {
+    background-color: #7a67bc;
+    border: 2px solid #fff;
+  }
+  .rightButton {
+    background-color: #caa8f5 /* #843B62 */;
+    width: 30vw;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    transform: skewX(-2deg) skewY(-1deg);
+  }
+  .rightButton > button {
+    background-color: var(--holoGreenTestColor);
+  }
+  .navigation-button h2 {
+    position: absolute;
+    z-index: 1;
+    font-size: 2rem;
+    bottom: calc(40% - 0.5rem);
+  }
+  .navigation-button {
+    display: flex;
+    justify-content: center;
+    box-shadow: 2px 2px 5px rgba(128, 128, 128, 0.715);
+    border-top: 2px solid rgb(54, 54, 54);
+    border-left: 2px solid rgb(54, 54, 54);
+    border-bottom: 3px solid rgb(59, 59, 59);
+    border-right: 3px solid rgb(69, 69, 69);
+  }
+  .navigation-button:hover,
+  .circle1.navigation-button:hover {
+    border: 2px solid #959595c1;
+  }
+  .circle1.navigation-button {
+    border-top: 2.5px solid rgb(54, 54, 54);
+    border-left: 2.5px solid rgb(54, 54, 54);
+    border-bottom: 3px solid rgb(59, 59, 59);
+    border-right: 3px solid rgb(69, 69, 69);
+  }
+  .leftButton .navigation-button > h2 {
+    left: 45%;
+  }
+  .leftButton .navigation-button > h2 {
+    text-shadow: 1px 1px rgba(120, 120, 120, 0.603);
+  }
+  .circle1 {
+    position: absolute;
+    left: 1.5vw;
+    top: 0.86vh;
+    background-color: #fff;
+    height: 99%;
+    width: 40vw;
+    border-radius: 45% 35% 0% 0;
+  }
+  .circle2 {
+    background-color: white;
+    height: calc(100% - 2vh);
+    width: 26vw;
+    border-radius: 100% 100% 100% 100%;
+    transform: skewX(-2deg);
+  }
+  .circle3 {
+    background-color: white;
+    height: calc(100% - 2vh);
+    width: 25vw /* 32vw */;
+    border-radius: 0% 0 45% 35%;
+    transform: skewX(-2deg);
+  }
+
+  /*      .circle4 {
+                         background-color: lightpink;
+                         border: 100% 0 100% 0;
+                         height: 90%;
+                         width: 100%;
+                       } */
+  .test {
+    margin-left: 1vh;
+    height: 72vh;
+    width: 97%;
+    border-radius: 50em 6% 20em 50em;
+    background-color: #222;
+    display: flex;
+    justify-content: end;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    /* firefox */
+    scrollbar-width: 0px;
+  }
+  ::-webkit-scrollbar {
+    /* chrome, edge */
+    display: none;
+  }
+  .mainContain {
+    /* background-color: rgba(34, 238, 51, 0.187); */
+    height: 100%;
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 1.1rem;
+  }
+  .imageIcons {
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+  }
+  .imgBox {
+    /*  background-image: linear-gradient(to left, #00000000, #ffffffa1); */
+    min-width: 85%;
+    min-height: 5vh;
+    height: 100px;
+    max-height: 20vh;
+    /* margin-bottom: 1px; */
+    transform: perspective(40px) rotateX(-1deg);
+    display: flex;
+    padding-top: 0.69rem;
+  }
+  .imgBox img {
+    border-radius: 2px;
+    min-height: 115%;
+    width: clamp(150px, 10vw, 400px);
+  }
+
+  .imgBox:hover img {
+    border: 1px solid black;
+    box-shadow: 2px 2px 4px #2e2e2e;
+    border-radius: 4px;
+  }
+  .imgBox.nonfocus > .project-description {
+    color: #fff0;
+  }
+  .imgBox.nonfocus:hover > .projectLinkImage {
+    min-width: 15rem;
+  }
+  .imgBox:not(.nonfocus) > .projectLinkImage {
+    min-width: 15rem;
+  }
+  .imgBox.nonfocus:hover > .project-description,
+  .imgBox:not(.nonfocus) > .project-description {
+    width: clamp(40ch, 12vw, 80ch);
+    color: #fff;
+    /* position: absolute;
+               left: 50%;
+
+               top: 10%; */
+    position: relative;
+    top: 0.5rem;
+    right: -1rem;
+    font-size: 1.3rem;
+    background-color: #2e2e2e9b;
+    border-radius: 20px;
+    padding: 1rem;
+  }
+  .project-description {
+  }
+  .project-description > h3 {
+    margin-bottom: 0.5rem;
+  }
+  .imgBox::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    max-height: 11rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding-bottom: 8rem;
+    background-image: linear-gradient(to left, #00000000, #ffffffa1);
+    z-index: -1;
+    border-top: 2px solid rgba(0, 0, 0, 0.576);
+  }
+  .imgBox:hover,
+  .imgBox:not(.nonfocus) {
+    transform: perspective(40px) rotateX(-1deg) translateY(-20px)
+      translateX(-80px) scale(0.8);
+    min-height: 300px;
+    min-width: 120%;
+    padding: 2rem;
+    margin-bottom: -50px;
+    z-index: 2;
+    position: relative;
+  }
+
+  .imgBox img {
+    position: relative;
+    left: 18px;
+    top: 1px;
+    width: fit-content;
+    max-width: 80%;
+    height: fit-content;
+    max-height: 40ch;
+  }
+  .imgBx2 {
+    position: relative;
+    left: -5px;
+  }
+  .imgBx3 {
+    position: relative;
+    left: -10px;
+  }
+  .imgBx4 {
+    position: relative;
+    left: -15px;
+  }
+  .imgBx5 {
+    position: relative;
+    left: -20px;
+  }
+  .imgBx6 {
+    position: relative;
+    left: -25px;
+  }
+  .imgBx7 {
+    position: relative;
+    left: -30px;
+  }
+  .imgBx8 {
+    position: relative;
+    left: -35px;
+  }
+  .imgBx9 {
+    position: relative;
+    left: -40px;
+  }
+
+  /* .imgBox::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      max-width: 100%;
+      height: 100%;
+      background: #000;
+      transform: skew(-45deg);
+      z-index: 1;
+} */
+
+  /* @media(width>1000px) {
+    .imagewheel .imageIcons .imgBox {
+        transform-origin: 400px;
+        left: -390px;
+
+}
+} */
+  @media (width >= 940px) {
+    .imgBox:hover,
+    .imgBox:not(.nonfocus) {
+      min-width: 100vw;
+      transform: perspective(50px) rotateX(-1deg) translateY(-20px)
+        translateX(-100px) scale(0.8);
+      background-image: linear-gradient(to right, gray 70%, #0e0e0e1f);
+    }
+  }
+  @media (hover: hover) {
+    .leftButton > button,
+    .rightButton > button {
+      background-color: #fff;
+    }
+    .bottom:has(.middleButton.activated) .leftButton > button:active {
+      background-color: #843b62;
+    }
+    .bottom:has(.middleButton.activated) .rightButton > button:active {
+      background-color: var(--holoGreenTestColor);
+    }
+
+    .welcomeText:hover {
+      color: #fff;
+      transform: scaleX(1.1) scaleY(1.1) translateY(-0.3rem) translateX(0.5rem);
+      transform-origin: left;
+    }
+    .welcomeText:hover::after {
+      content: "! Welcome to J CIRCUS.";
+    }
+  }
+  @media (hover: none) {
+    .welcomeText {
+      color: #fff;
+      transform: scaleX(1.1) scaleY(1.1) translateY(-0.2rem) translateX(0.5rem);
+      transform-origin: left;
+    }
+    .welcomeText::after {
+      content: "! Welcome to J CIRCUS.";
+    }
+    .imgBox:active img {
+      border: 4px solid black;
+      box-shadow: 2px 2px 4px #2e2e2e;
+      border-radius: 4px;
+    }
+  }
+}
